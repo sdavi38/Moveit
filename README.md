@@ -69,7 +69,13 @@ This project is for study purposes too, so send me an email telling me what you 
 
 By David Bernardo 👋🏽 Find me:
 
-<h2 id="license"> 📝 License </h2>
+# :closed_book: License
+
+Released in 2020 :closed_book: License
+
+Made with love by [David Bernardo](https://github.com/sdavi38) 🚀.
+This project is under the [MIT license](./LICENSE).
 
 
-This project is under the MIT license.
+Give a ⭐️ if this project helped you!
+
