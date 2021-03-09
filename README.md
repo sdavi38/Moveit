@@ -41,7 +41,7 @@ Required! Install git, node and yarn (or npm).
 
 ```bash
 # Clone Repository
-$ git clone 
+$ git clone: https://github.com/sdavi38/Moveit.git
 
 # Install Dependencies
 $ yarn
@@ -51,7 +51,6 @@ $ yarn dev
 
 # Access localhost
 http://localhost:3000
-```
 
 <h2 id="contribution"> 🤝 Contribution </h2>
 

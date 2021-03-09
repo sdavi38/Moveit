@@ -41,7 +41,7 @@ Requerido! Instale git, node e yarn (ou npm).
 
 `` `bash
 # Repositório de clones
-$ git clone
+$ git clone : https://github.com/sdavi38/Moveit.git
 
 # Instalar Dependências
 $ yarn
@@ -51,7 +51,7 @@ $ yarn dev
 
 # Acesse localhost
 http: // localhost: 3000
-`` `
+
 
 <h2 id = "Contribution"> 🤝 Contribuição </h2>
 
@@ -64,7 +64,12 @@ Este projeto é para fins de estudo também, então me mande um e-mail me contan
 
 Por David Bernardo 👋🏽 Encontre-me:
 
-<h2 id = "license"> 📝 Licença </h2>
+#: closed_book: Licença
+
+Lançado em 2020: livro fechado: Licença
+
+Feito com amor por [David Bernardo] (https://github.com/sdavi38) 🚀.
+Este projeto está sob a [licença do MIT] (./ LICENÇA).
 
 
-Este projeto está sob a licença
+Dê um ⭐️ se este projeto te ajudou!

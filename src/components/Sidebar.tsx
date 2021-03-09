@@ -13,6 +13,7 @@ export function Sidebar() {
           <FiHome size={32} />
           </Link>
         </button>
+        
         <button type="button" disabled>
           <div></div>
            <Link href="/leaderbord">
