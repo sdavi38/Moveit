@@ -1,0 +1,58 @@
+.learderbordContainer{
+  display: flex;
+  align-items: center;
+
+}
+.learderbordContainer > div >span{
+  
+  color: var(--title);
+  font-size: 2rem;
+  position: relative;
+}
+.learderbordContainer > img{
+  width: 5rem;
+  height: 5rem;
+  border-radius: 55%;
+
+}
+.completedLearderbord{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+
+ 
+}
+.completedLearderbord span:first-child{
+  font-size: 1rem;
+  color: var(--blue);
+  }
+  .completedLearderbord span:last-child{
+    font-size: 1rem;
+   
+ }
+.learderbordContainer div{
+  margin-left: 1.5rem;
+}
+.learderbordContainer div strong{
+  font-size: 1rem;
+  font-weight: 200;
+  color: var(--title);
+}
+.learderbordContainer div p{
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+.learderbordContainer div p img{
+  margin-right: 0.8rem;
+}
+.currentLearderbord span:first-child{
+  font-size: 1rem;
+  color: var(--blue);
+
+}
+.currentLearderbord span:last-child{
+  font-size: 1rem;
+
+
+}
