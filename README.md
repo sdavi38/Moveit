@@ -17,6 +17,11 @@
 <h4 align="center"> 
 	🚧 Movei.it | NLW#4 ⏰📈 Loading...  🚧
 </h4>
+<p align="center">
+    <a href="README.md">English</a>
+    ·
+    <a href="README-pt.md">Portuguese</a>
+ </p>
 
 <h2 id="objective" > 🎯 Objective </h2>
 
