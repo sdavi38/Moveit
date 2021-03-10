@@ -64,12 +64,12 @@ Este projeto é para fins de estudo também, então me mande um e-mail me contan
 
 Por David Bernardo 👋🏽 Encontre-me:
 
-#: closed_book: Licença
+# :closed_book: License
 
-Lançado em 2020: livro fechado: Licença
+Released in 2020 :closed_book: License
 
-Feito com amor por [David Bernardo] (https://github.com/sdavi38) 🚀.
-Este projeto está sob a [licença do MIT] (./ LICENSE).
+Made with love by [David Bernardo](https://github.com/sdavi38) 🚀.
+This project is under the [MIT license](./LICENSE).
 
 
 Dê um ⭐️ se este projeto te ajudou!
