@@ -44,7 +44,7 @@ The following tools were used in the construction of the project:
 
 Required! Install git, node and yarn (or npm).
 
-```bash
+
 # Clone Repository
 $ git clone: https://github.com/sdavi38/Moveit.git
 

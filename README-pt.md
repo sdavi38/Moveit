@@ -39,7 +39,7 @@ As seguintes ferramentas foram utilizadas na construção do projeto:
 
 Requerido! Instale git, node e yarn (ou npm).
 
-`` `bash
+
 # Repositório de clones
 $ git clone : https://github.com/sdavi38/Moveit.git
 
@@ -69,7 +69,7 @@ Por David Bernardo 👋🏽 Encontre-me:
 Lançado em 2020: livro fechado: Licença
 
 Feito com amor por [David Bernardo] (https://github.com/sdavi38) 🚀.
-Este projeto está sob a [licença do MIT] (./ LICENÇA).
+Este projeto está sob a [licença do MIT] (./ LICENSE).
 
 
 Dê um ⭐️ se este projeto te ajudou!
