@@ -6,9 +6,7 @@
    <img src="./.github/logo.svg" alt="Move It" width="300"/>
 </p>
 
-<h1 align="center">
-    Movei.it | NLW#4
-</h1>
+
 <p align="center"> Application developed in the fourth edition of Rocketseat Next Level Week 💻🚀 </p>
 
 <p align="center">
