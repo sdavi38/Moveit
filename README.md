@@ -45,16 +45,16 @@ The following tools were used in the construction of the project:
 Required! Install git, node and yarn (or npm).
 
 
-# Clone Repository
+## Clone Repository
 $ git clone: https://github.com/sdavi38/Moveit.git
 
-# Install Dependencies
+## Install Dependencies
 $ yarn
 
-# Run Aplication
+## Run Aplication
 $ yarn dev
 
-# Access localhost
+## Access localhost
 http://localhost:3000
 
 <h2 id="contribution"> 🤝 Contribution </h2>
@@ -68,7 +68,7 @@ This project is for study purposes too, so send me an email telling me what you 
 
 By David Bernardo 👋🏽 Find me:
 
-# :closed_book: License
+## :closed_book: License
 
 Released in 2020 :closed_book: License
 

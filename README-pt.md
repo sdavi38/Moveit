@@ -17,8 +17,13 @@
 <h4 align = "center">
 🚧 Movei.it | NLW # 4 ⏰📈 Carregando ... 🚧
 </h4>
+<p align="center">
+    <a href="README.md">English</a>
+    ·
+    <a href="README-pt.md">Portuguese</a>
+ </p>
 
-<h2 id = "goal"> 🎯 Objetivo </h2>
+<h2 id = "objective"> 🎯 Objetivo </h2>
 
 Controle o seu tempo, seja mais produtivo e cuide da sua saúde. <a href="https://timeup.vercel.app"> </a> foi desenvolvido para gerenciamento de tempo, como na técnica de pomodoro, dividindo o trabalho em períodos de 25 minutos. Depois desse tempo, ele libera um desafio, que é um alongamento para o corpo ou exercícios para os olhos. Cada desafio tem seus pontos de xp e, acumulando os pontos você sobe de nível.
 
@@ -40,16 +45,16 @@ As seguintes ferramentas foram utilizadas na construção do projeto:
 Requerido! Instale git, node e yarn (ou npm).
 
 
-# Repositório de clones
+## Repositório de clones
 $ git clone : https://github.com/sdavi38/Moveit.git
 
-# Instalar Dependências
+## Instalar Dependências
 $ yarn
 
-# Executar aplicação
+## Executar aplicação
 $ yarn dev
 
-# Acesse localhost
+## Acesse localhost
 http: // localhost: 3000
 
 
@@ -64,7 +69,7 @@ Este projeto é para fins de estudo também, então me mande um e-mail me contan
 
 Por David Bernardo 👋🏽 Encontre-me:
 
-# :closed_book: License
+## :closed_book: License
 
 Released in 2020 :closed_book: License
 
