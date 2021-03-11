@@ -27,6 +27,7 @@
     ·
     <a href="README-pt.md">Portuguese</a>
  </p>
+
    <p align="center">
    <img src="./.github/home.png" alt="home" width="300"/>
 </p>
@@ -54,16 +55,16 @@ As seguintes ferramentas foram utilizadas na construção do projeto:
 Requerido! Instale git, node e yarn (ou npm).
 
 
-## Repositório de clones
+### Repositório de clones
 $ git clone : https://github.com/sdavi38/Moveit.git
 
-## Instalar Dependências
+### Instalar Dependências
 $ yarn
 
-## Executar aplicação
+### Executar aplicação
 $ yarn dev
 
-## Acesse localhost
+### Acesse localhost
 http: // localhost: 3000
 
 
@@ -78,7 +79,7 @@ Este projeto é para fins de estudo também, então me mande um e-mail me contan
 
 Por David Bernardo 👋🏽 Encontre-me:
 
-## :closed_book: License
+### :closed_book: License
 
 Released in 2020 :closed_book: License
 
