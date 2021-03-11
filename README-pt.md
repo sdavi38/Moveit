@@ -27,6 +27,10 @@
     ·
     <a href="README-pt.md">Portuguese</a>
  </p>
+   <p align="center">
+   <img src="./.github/home.png" alt="home" width="300"/>
+</p>
+
 
 <h2 id = "objective"> 🎯 Objetivo </h2>
 

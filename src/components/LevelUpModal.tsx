@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import Link from 'next/link';
 import { useContext} from 'react';
 import { FiTwitter } from 'react-icons/fi';
@@ -7,7 +8,12 @@ import styles from '../styles/components/LevelUpModal.module.css';
 export function LevelUpModal() {
   const { level, closeLevelUpModal, currentExperience } = useContext(ChallengeContext);
   return (
-    <div className={styles.overlay}>
+
+
+        <div className={styles.overlay}>
+       <Head>
+        <title> UpModal| Movei.it</title>
+      </Head>
       <div className={styles.container}>
         <header>{level}</header>
 
