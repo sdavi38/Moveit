@@ -51,17 +51,42 @@ The following tools were used in the construction of the project:
 Required! Install git, node and yarn (or npm).
 
 
-## Clone Repository
+## :rocket: Começando
+``` bash
+  # Clonar o projeto:
 $ git clone: https://github.com/sdavi38/Moveit.git
+  # Entrar no diretório:
+  $ cd Moveit
+```
 
-## Install Dependencies
-$ yarn
+## :gear: Iniciando back-end
+```bash
+  # Entrar no diretório do back-end:
+  $ cd backend
 
-## Run Aplication
-$ yarn dev
+  # Instalar as dependências:
+  $ yarn
 
-## Access localhost
-http://localhost:3000
+  # Rodar as migrations:
+  $ yarn typeorm migration:run
+
+  # Rodar a aplicação:
+  $ yarn dev:server
+```
+
+## :computer: Iniciando front-end
+```bash
+  # Entrar no diretório do front-end:
+  $ cd frontend
+
+  # Instalar as dependências:
+  $ yarn
+
+  # Rodar a aplicação:
+  $ yarn start
+```
+
+
 
 <h2 id="contribution"> 🤝 Contribution </h2>
 
