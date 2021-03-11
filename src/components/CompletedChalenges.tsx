@@ -10,7 +10,7 @@ export function CompletedChalenges() {
   return (
     <div className={styles.completedChalengesContainer}>
       <span>
-        <FiAward size={16} />
+     
         Desafios completos
       </span>
       <span>{challengesCompleted}</span>

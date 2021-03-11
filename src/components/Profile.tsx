@@ -2,6 +2,7 @@ import { useContext, useEffect } from 'react';
 import Cookie from 'js-cookie';
 import { ChallengeContext } from '../contexts/ChallengeContext';
 import styles from '../styles/components/Profile.module.css';
+import { FiAward } from 'react-icons/fi';
 
 interface UserGitHub {
   name: string;
@@ -28,7 +29,10 @@ export function Profile(user: UserGitHub) {
           <img src="icons/level.svg" alt="Level" />
           Level {level}
         </p>
-         <span>{totalAmount}</span> 
+        <div>
+        <FiAward size={23} color="#5965e0" />
+         <p>Total Experiência: <span>{totalAmount}</span></p> 
+         </div>
       </div>
     </div>
   );
