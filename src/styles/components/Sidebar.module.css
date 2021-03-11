@@ -9,7 +9,7 @@
   justify-content: space-around;
   align-items: center;
 }
-
+/*  */
 @media (max-width: 980px) {
   .container {
     width: 100%;
@@ -35,11 +35,42 @@
     visibility: hidden;
     display: none;
   }
-  .container div.logOut {
+  .container button.logOut {
+    visibility: hidden;
+    display: none;
+  }
+  .container button.settings {
     visibility: hidden;
     display: none;
   }
 }
+
+.container button.settings {
+  bottom: 120px;
+  position: fixed;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+
+  background-color: transparent;
+  border: none;
+}
+
+.container button.settings svg {
+  color: var(--text);
+}
+
+
+.container button.settings svg:hover {
+  color: var(--blue);
+}
+
 
 .container img {
   top: 50px;
@@ -83,10 +114,7 @@
   background-color: transparent;
   border: none;
 }
-.button button{
 
-
-}
 .buttons button:disabled {
   color: var(--gray);
 }

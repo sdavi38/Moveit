@@ -5,6 +5,7 @@
   <p align="center">
    <img src="./.github/logo.svg" alt="Move It" width="300"/>
 </p>
+
 <p align = "center"> Aplicativo desenvolvido na quarta edição da Rocketseat Next Level Week 💻🚀 </p>
 
 <p align = "center">

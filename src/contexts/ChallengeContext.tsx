@@ -16,6 +16,7 @@ interface ChallengeContextData {
   challengesCompleted: number;
   activeChallenge: Challenge;
   totalAmount:number;
+
   levelUp: () => void;
   startNewChallenge: () => void;
   resetChallenge: () => void;
@@ -30,6 +31,7 @@ interface ChallengeProviderProps {
   totalAmount:number;
   currentExperience: number;
   challengesCompleted: number;
+
 }
 
 export const ChallengeContext = createContext({} as ChallengeContextData);
@@ -39,7 +41,7 @@ export function ChallengeProvider({
   ...rest
 }: ChallengeProviderProps) {
   const [level, setLevel] = useState(rest.level ?? 1);
-  const [totalAmount , setTotalAmount]= useState(0)
+  const [totalAmount , setTotalAmount]= useState(rest.totalAmount ?? 0,)
   
   const [currentExperience, setCurrentExperience] = useState(
     rest.currentExperience ?? 0,
@@ -62,13 +64,14 @@ export function ChallengeProvider({
     Cookie.set('totalAmount', String(totalAmount));
     Cookie.set('currentExperience', String(currentExperience));
     Cookie.set('challengesCompleted', String(challengesCompleted));
-  }, [level, currentExperience, challengesCompleted]);
+  }, [level, currentExperience, challengesCompleted, totalAmount]);
 
   function levelUp() {
     setLevel(level + 1);
     setIsLevelModalOpen(true);
   }
-  
+    
+
  
   function closeLevelUpModal() {
     setIsLevelModalOpen(false);
@@ -94,29 +97,26 @@ export function ChallengeProvider({
 function resetChallenge() {
     setActiveChallenge(null);
     
+    
   }
 
 
   function completeChallenge() {
     if (!activeChallenge) return;
-
     const { amount } = activeChallenge;
-
     let finalExperience = currentExperience + amount;
    
-
-
     if (finalExperience >= experienceToNextLevel) {
       finalExperience = finalExperience - experienceToNextLevel;
       levelUp();
-      
+          
     }
     
-
     setCurrentExperience(finalExperience);
     setActiveChallenge(null);
     setChallengesCompleted(challengesCompleted + 1);
-     setTotalAmount(activeChallenge.amount + currentExperience )
+    setTotalAmount(totalAmount + activeChallenge.amount)
+   
   
   }
 
@@ -134,6 +134,7 @@ function resetChallenge() {
         completeChallenge,
         closeLevelUpModal,
         totalAmount,
+     
       }}
     >
       {children}

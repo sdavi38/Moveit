@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import styles from '../styles/pages/Home.module.css';
-
 import { GetServerSideProps } from 'next';
 import { CompletedChalenges } from '../components/CompletedChalenges';
 import { Countdown } from '../components/Countdown';
@@ -21,6 +20,7 @@ interface HomeProps {
   level: number;
   currentExperience: number;
   challengesCompleted: number;
+  totalAmount:number;
 }
 
 export default function Home(props: HomeProps) {
@@ -30,6 +30,7 @@ export default function Home(props: HomeProps) {
       level={props.level}
       currentExperience={props.currentExperience}
       challengesCompleted={props.challengesCompleted}
+      totalAmount={props.totalAmount}
     >
       <div className={styles.container}>
         <Head>
@@ -64,7 +65,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const response = await fetch(`https://api.github.com/users/${username}`);
   const user = await response.json();
 
-  const { level, currentExperience, challengesCompleted } = ctx.req.cookies;
+  const { level, currentExperience, challengesCompleted,totalAmount } = ctx.req.cookies;
 
   return {
     props: {
@@ -72,6 +73,8 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
       level: Number(level),
       currentExperience: Number(currentExperience),
       challengesCompleted: Number(challengesCompleted),
+      totalAmount:Number(totalAmount)
+    
     },
   };
 };

@@ -12,6 +12,12 @@ interface UserGitHub {
 export function Profile(user: UserGitHub) {
   const { level,totalAmount} = useContext(ChallengeContext);
 
+  useEffect(() => {
+    Cookie.set('user', String(user.name));
+    Cookie.set('avatar', String(user.avatar_url));
+    
+  
+    }, [user.name, user.avatar_url, ]);
 
   return (
     <div className={styles.profileContainer}>
