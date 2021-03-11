@@ -1,4 +1,6 @@
-import { useContext } from 'react';
+import Link from 'next/link';
+import { useContext} from 'react';
+import { FiTwitter } from 'react-icons/fi';
 import { ChallengeContext } from '../contexts/ChallengeContext';
 import styles from '../styles/components/LevelUpModal.module.css';
 
@@ -16,9 +18,17 @@ export function LevelUpModal() {
           <img src="/icons/close.svg" alt="Fechar" />
         </button>
         <div>
-          <p></p>
+          <footer className={styles.buttonFooter}>
+           <button>                    
+            <p>Compartilhar no Twitter</p>
+               <FiTwitter size={26} color="#2aa9e0" />
+           </button>
+       
+        </footer>
+          
         </div>
-      </div>
+     </div>
+     
     </div>
   );
 }
