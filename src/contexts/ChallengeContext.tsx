@@ -64,6 +64,7 @@ export function ChallengeProvider({
     Cookie.set('totalAmount', String(totalAmount));
     Cookie.set('currentExperience', String(currentExperience));
     Cookie.set('challengesCompleted', String(challengesCompleted));
+    
   }, [level, currentExperience, challengesCompleted, totalAmount]);
 
   function levelUp() {

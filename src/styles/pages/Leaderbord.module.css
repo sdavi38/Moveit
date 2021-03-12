@@ -1,32 +1,122 @@
 .container {
-  width: 100%;
   display: flex;
+  height: 100vh;
 }
 
-.content {
-  height: 100vh;
-  width: 70%;
-  max-width: 950px;
+.leaderboard {
+  max-width: 992px;
   margin: 0 auto;
-  padding: 2.2rem 2rem;
+  padding: 2.5rem 2rem;
+  position: relative;
 
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
 }
 
-.content section {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 6.25rem;
+.leaderboard strong {
+  font-size: 2.25rem;
+  color: var(--title);
+}
+
+.info {
+  display: flex;
+  padding: 2.5rem 3.5rem 1.5rem 0.25rem;
   align-content: center;
+
+  font-weight: 700;
+  font-size: 0.87rem;
+  color: var(--text);
 }
 
-@media (max-width: 980px) {
-  .content {
-    width: 95%;
-    margin-bottom: 350px;
-  }
-  .content section {
-    grid-template-columns: 1fr;
-  }
+.info p {
+  margin-right: 2.75rem;
+}
+
+.info p:nth-child(2) {
+  margin-right: 24.25rem;
+}
+
+.info p:nth-child(3) {
+  margin-right: 8.25rem;
+}
+
+.users {
+  display: flex;
+  height: 6rem;
+  padding-bottom: 0.5rem;
+}
+
+.position {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 4.5rem;
+  background: var(--white);
+
+  font-size: 1.5rem;
+  border-radius: 5px 0 0 5px;
+  border-right: 2px solid #f0f1f3;
+}
+
+.userInfo {
+  display: flex;
+  align-content: center;
+
+  align-items: center;
+
+  width: 55.25rem;
+  background: var(--white);
+
+  border-radius: 0 5px 5px 0;
+  border-left: 2px solid #f0f1f3;
+
+  padding: 0 2rem;
+}
+
+.user > img {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user div {
+  display: flex;
+  flex-direction: column;
+  width: 18rem;
+}
+
+.user strong {
+  font-weight: 600;
+  padding-left: 0.20rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+}
+
+.user p img {
+  padding-right: 0.5rem;
+}
+
+.text {
+  display: flex;
+  font-weight: 500;
+  margin-left: 5.25rem;
+  width: 9.5rem;
+}
+
+.text + .text {
+  margin-left: 3.25rem;
+}
+
+.text p:first-child {
+  color: var(--blue);
+  margin-right: 0.25rem;
 }

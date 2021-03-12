@@ -35,7 +35,7 @@
 
 <h2 id = "objective"> 🎯 Objetivo </h2>
 
-Controle o seu tempo, seja mais produtivo e cuide da sua saúde. <a href="https://timeup.vercel.app"> </a> foi desenvolvido para gerenciamento de tempo, como na técnica de pomodoro, dividindo o trabalho em períodos de 25 minutos. Depois desse tempo, ele libera um desafio, que é um alongamento para o corpo ou exercícios para os olhos. Cada desafio tem seus pontos de xp e, acumulando os pontos você sobe de nível.
+Controle o seu tempo, seja mais produtivo e cuide da sua saúde. <a href="https://move-it-next-five.vercel.app/"> </a> foi desenvolvido para gerenciamento de tempo, como na técnica de pomodoro, dividindo o trabalho em períodos de 25 minutos. Depois desse tempo, ele libera um desafio, que é um alongamento para o corpo ou exercícios para os olhos. Cada desafio tem seus pontos de xp e, acumulando os pontos você sobe de nível.
 
 O layout do move.it original está disponível <a href="https://www.figma.com/file/ge20pu3ofMOKoliUyKx1Nl/?viewer=1&node-id="> aqui </a>.
 
@@ -52,20 +52,22 @@ As seguintes ferramentas foram utilizadas na construção do projeto:
 
 <h2 id = "usage"> 👷 Uso </h2>
 
-Requerido! Instale git, node e yarn (ou npm).
+## :rocket: Começando
+``` bash
+  # Clonar o projeto:
+$ git clone: https://github.com/sdavi38/Moveit.git
+  # Entrar no diretório:
+  $ cd Moveit
 
+  # Instalar as dependências:
+  $ yarn
 
-### Repositório de clones
-$ git clone : https://github.com/sdavi38/Moveit.git
+```
+``` bash
+  # Rodar a aplicação:
+  $ yarn dev
+```
 
-### Instalar Dependências
-$ yarn
-
-### Executar aplicação
-$ yarn dev
-
-### Acesse localhost
-http: // localhost: 3000
 
 
 <h2 id = "Contribution"> 🤝 Contribuição </h2>

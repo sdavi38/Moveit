@@ -1,40 +1,62 @@
 import Link from 'next/link';
+import {useRouter} from 'next/router'
+import { useState } from 'react';
+import Cookies from 'js-cookie';
 import { FiAward, FiHome, FiLogOut, FiSettings } from 'react-icons/fi';
 import styles from '../styles/components/Sidebar.module.css';
 
-export function Sidebar() {
 
-  function handleSetting(){
-      }
+
+interface SidebarProps {
+  page: 'dashboard' | 'leaderboard';
+}
+
+export function Sidebar({page}:SidebarProps) {
+  const router = useRouter();
+
+
+  function handleLogout() {
+    Cookies.remove('challengesCompleted');
+    Cookies.remove('level');
+    Cookies.remove('username');
+    Cookies.remove('currentExperience');
+   
+    router.push('/login');
+  }
+
   return (
     <div className={styles.container}>
-      <img src='./icons/icon.svg' alt="icon" />
-      <div className={styles.buttons}>
-        <button type="button">
-          <div></div>
-            <Link href="/">
-          <FiHome size={32} />
-          </Link>
-        </button>
-        
-        <button type="button" disabled>
-          <div></div>
-           <Link href="/leaderbord">
-          <FiAward size={32} />
-          </Link>
-        </button>
-      </div>
-      <button className={styles.settings}>
-        <Link href="/">
-          <FiSettings size={28} />
+    <img src="/logo_blue.svg" alt="logo"/>
+
+    <div className={styles.options}>
+      <button disabled={page === 'dashboard'}>
+        <Link href="/" replace>
+          <a>
+            {
+              page === 'dashboard' 
+              ? <img src="/icons/home_blue.svg" alt="award"/> 
+              : <img src="/icons/home.svg" alt="award"/>
+            }
+          </a>
         </Link>
       </button>
 
-      <div className={styles.logOut}>
-        <Link href="/">
-          <FiLogOut size={28} />
+      <button disabled={page === 'leaderboard'}>
+        <Link href="/leaderboard" replace>
+          <a>
+            {
+              page === 'leaderboard' 
+              ? <img src="/icons/award_blue.svg" alt="award"/> 
+              : <img src="/icons/award.svg" alt="award"/>
+            }
+          </a>
         </Link>
-      </div>
+      </button>
     </div>
-  );
+
+    <button onClick={handleLogout}>
+      <img src="/icons/logout.svg" alt="logout"/>
+    </button>
+  </div>
+)
 }

@@ -9,6 +9,10 @@ import { ChallengeBox } from '../components/ChallengeBox';
 import { CountdownProvider } from '../contexts/CountdownContext';
 import { ChallengeProvider } from '../contexts/ChallengeContext';
 import { Sidebar } from '../components/Sidebar';
+import { useRouter } from 'next/router';
+import { useEffect } from 'react';
+import Cookies from 'js-cookie';
+
 
 interface userGithub {
   name: string;
@@ -25,6 +29,16 @@ interface HomeProps {
 
 export default function Home(props: HomeProps) {
   const { user } = props;
+
+  const router = useRouter();
+
+  /*useEffect(() => {
+    const checkUserLoggedIn = Cookies.get('user');
+
+    if (!checkUserLoggedIn) {
+      router.push('/');
+    }
+  }, []);*/
   return (
     <ChallengeProvider
       level={props.level}
@@ -36,11 +50,11 @@ export default function Home(props: HomeProps) {
         <Head>
           <title>{user.name} | Move.it</title>
         </Head>
-
-        <Sidebar />
-
+        <Sidebar page="dashboard" />
         <div className={styles.content}>
+       
           <ExperienceBar />
+        
 
           <CountdownProvider>
             <section>

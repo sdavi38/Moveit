@@ -1,4 +1,68 @@
 .container {
+  position: fixed;
+  background: linear-gradient(to bottom, rgb(124, 122, 122), var(--background));
+
+  width: 90px;
+  height: 100vh;
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.06);
+
+  height: inherit;
+  padding: 20px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.container > img {
+  height: 2.5rem;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  justify-content: space-between;
+}
+
+.options button {
+  display: flex;
+  background: transparent;
+  border: none;
+  padding: 8px 0;
+  position: relative;
+  font-size: 0;
+  outline: none;
+}
+
+.options button a {
+  display: flex;
+  height: 3rem;
+}
+
+.options button:disabled:after {
+  content: "";
+  position: absolute;
+  border: 5px solid var(--blue);
+  border-radius: 5px  5px;
+  height: 100%;
+  top: 0;
+  left: -110%;
+}
+
+.container > button {
+  background: none;
+  border: none;
+  display: flex;
+}
+
+.container > button img {
+  height: 24px;
+}
+/*
+.container {
   width: 90px;
   height: 100vh;
   background-color: var(--white);
@@ -9,7 +73,7 @@
   justify-content: space-around;
   align-items: center;
 }
-/*  */
+/*  *//*
 @media (max-width: 980px) {
   .container {
     width: 100%;
@@ -44,7 +108,7 @@
     display: none;
   }
 }
-
+/*
 .container button.settings {
   bottom: 120px;
   position: fixed;
@@ -118,6 +182,11 @@
 .buttons button:disabled {
   color: var(--gray);
 }
+.buttons button:not(:disabled){
+  background-color: var(--red);
+  color: var(--white);
+}
+
 
 .buttons button div {
   width: 5px;
@@ -130,3 +199,4 @@
 .buttons button:disabled div {
   background-color: var(--white);
 }
+*/
