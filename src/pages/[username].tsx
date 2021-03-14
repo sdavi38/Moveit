@@ -29,8 +29,6 @@ export default function Home (props: HomeProps) {
 
   const router = useRouter()
 
-
-
   /* useEffect(() => {
     const checkUserLoggedIn = Cookies.get('user');
 
@@ -88,9 +86,5 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
       totalAmount: Number(totalAmount)
 
     }
-  };
-};
-
-
-
-
+  }
+}

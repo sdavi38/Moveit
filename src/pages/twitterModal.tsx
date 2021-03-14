@@ -4,22 +4,15 @@ import { useContext } from 'react'
 
 import { FiTwitter } from 'react-icons/fi'
 import { ChallengeContext } from '../contexts/ChallengeContext'
-import styles from '../styles/components/LevelUpModal.module.css'
-import { useRouter } from 'next/router'
+import styles from '../styles/components/TwitterModal.module.css'
 
-export function LevelUpModal () {
+export default function twitterModal () {
   const { level, closeLevelUpModal, currentExperience } = useContext(ChallengeContext)
-
-  const router = useRouter()
-
-  function handleTwitter () {
-    router.push('./twitterModal')
-  }
   return (
 
         <div className={styles.overlay}>
        <Head>
-        <title> UpModal| Movei.it</title>
+        <title> Twitter| Movei.it</title>
       </Head>
       <div className={styles.container}>
         <header>{level}</header>
@@ -32,8 +25,13 @@ export function LevelUpModal () {
         </button>
         <div>
           <footer className={styles.buttonFooter}>
-           <button onClick={handleTwitter}>
-            <p>Compartilhar no Twitter</p>
+           <button>
+           <a href="https://twitter.com/share?"
+            data-show-count="true"
+            target="_blank"
+            >
+               <p>Compartilhar agora</p>
+            </a><a href=""></a>
 
                <FiTwitter size={26} color="#2aa9e0" />
 
