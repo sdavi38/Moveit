@@ -1,34 +1,30 @@
-import React, { useCallback, useRef, useState } from 'react';
-import { useRouter } from 'next/router';
-import { FiGithub, FiLogIn } from 'react-icons/fi';
+import React, { useCallback, useRef, useState } from 'react'
+import { useRouter } from 'next/router'
+import { FiGithub, FiLogIn } from 'react-icons/fi'
 
-import styles from '../styles/pages/Login.module.css';
-import Head from 'next/head';
+import styles from '../styles/pages/Login.module.css'
+import Head from 'next/head'
 
-export default function Profile() {
-  const inputRef = useRef<HTMLInputElement>(null);
+export default function Profile () {
+  const inputRef = useRef<HTMLInputElement>(null)
 
-  const [isFocused, setIsFocused] = useState(false);
+  const [isFocused, setIsFocused] = useState(false)
 
   const handleFocus = useCallback(() => {
-    setIsFocused(true);
-  }, []);
+    setIsFocused(true)
+  }, [])
 
   const handleBlur = useCallback(() => {
-    setIsFocused(false);
-  }, []);
+    setIsFocused(false)
+  }, [])
 
+  const { push } = useRouter()
+  const [username, setUsername] = useState('')
 
-
-  
-  const { push } = useRouter();
-  const [username, setUsername] = useState('');
-
-  function handleSubmit(e) {
-    e.preventDefault();
+  function handleSubmit (e) {
+    e.preventDefault()
     if (username) {
-
-      push(`/${username}`);
+      push(`/${username}`)
     }
   }
 
@@ -38,7 +34,7 @@ export default function Profile() {
         <title>Home | Movei.it</title>
       </Head>
       <div className={styles.content}>
-      <img src="/logo/logo.svg" alt="logo"/> 
+      <img src="/logo/logo.svg" alt="logo"/>
         <strong>Bem-vindo</strong>
 
         <div className={styles.title}>
@@ -61,5 +57,5 @@ export default function Profile() {
         </form>
       </div>
     </div>
-  );
+  )
 }

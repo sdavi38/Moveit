@@ -1,18 +1,15 @@
-import Head from 'next/head';
-import styles from '../styles/pages/Home.module.css';
-import { GetServerSideProps } from 'next';
-import { CompletedChalenges } from '../components/CompletedChalenges';
-import { Countdown } from '../components/Countdown';
-import { ExperienceBar } from '../components/ExperienceBar';
-import { Profile } from '../components/Profile';
-import { ChallengeBox } from '../components/ChallengeBox';
-import { CountdownProvider } from '../contexts/CountdownContext';
-import { ChallengeProvider } from '../contexts/ChallengeContext';
-import { Sidebar } from '../components/Sidebar';
-import { useRouter } from 'next/router';
-import { useEffect } from 'react';
-import Cookies from 'js-cookie';
-
+import Head from 'next/head'
+import styles from '../styles/pages/Home.module.css'
+import { GetServerSideProps } from 'next'
+import { CompletedChalenges } from '../components/CompletedChalenges'
+import { Countdown } from '../components/Countdown'
+import { ExperienceBar } from '../components/ExperienceBar'
+import { Profile } from '../components/Profile'
+import { ChallengeBox } from '../components/ChallengeBox'
+import { CountdownProvider } from '../contexts/CountdownContext'
+import { ChallengeProvider } from '../contexts/ChallengeContext'
+import { Sidebar } from '../components/Sidebar'
+import { useRouter } from 'next/router'
 
 interface userGithub {
   name: string;
@@ -27,18 +24,20 @@ interface HomeProps {
   totalAmount:number;
 }
 
-export default function Home(props: HomeProps) {
-  const { user } = props;
+export default function Home (props: HomeProps) {
+  const { user } = props
 
-  const router = useRouter();
+  const router = useRouter()
 
-  /*useEffect(() => {
+
+
+  /* useEffect(() => {
     const checkUserLoggedIn = Cookies.get('user');
 
     if (!checkUserLoggedIn) {
       router.push('/');
     }
-  }, []);*/
+  }, []); */
   return (
     <ChallengeProvider
       level={props.level}
@@ -52,9 +51,8 @@ export default function Home(props: HomeProps) {
         </Head>
         <Sidebar page="dashboard" />
         <div className={styles.content}>
-       
+
           <ExperienceBar />
-        
 
           <CountdownProvider>
             <section>
@@ -71,15 +69,15 @@ export default function Home(props: HomeProps) {
         </div>
       </div>
     </ChallengeProvider>
-  );
+  )
 }
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
-  const { username } = ctx.params;
-  const response = await fetch(`https://api.github.com/users/${username}`);
-  const user = await response.json();
+  const { username } = ctx.params
+  const response = await fetch(`https://api.github.com/users/${username}`)
+  const user = await response.json()
 
-  const { level, currentExperience, challengesCompleted,totalAmount } = ctx.req.cookies;
+  const { level, currentExperience, challengesCompleted, totalAmount } = ctx.req.cookies
 
   return {
     props: {
@@ -87,8 +85,12 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
       level: Number(level),
       currentExperience: Number(currentExperience),
       challengesCompleted: Number(challengesCompleted),
-      totalAmount:Number(totalAmount)
-    
-    },
+      totalAmount: Number(totalAmount)
+
+    }
   };
 };
+
+
+
+

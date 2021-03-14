@@ -1,13 +1,11 @@
-import Head from 'next/head';
+import Head from 'next/head'
 
-import styles from '../styles/pages/Leaderbord.module.css';
+import styles from '../styles/pages/Leaderbord.module.css'
 
-import {Sidebar} from "../components/Sidebar"
-import { GetServerSideProps, GetStaticProps } from 'next';
-import { useContext } from 'react';
-import { ChallengeContext, ChallengeProvider } from '../contexts/ChallengeContext';
-//import api from '../services/api';
-
+import { Sidebar } from '../components/Sidebar'
+import { useContext } from 'react'
+import { ChallengeContext, ChallengeProvider } from '../contexts/ChallengeContext'
+// import api from '../services/api';
 
 interface userGithub {
   name: string;
@@ -22,16 +20,16 @@ interface LeaderboardProps {
   totalAmount:number;
 }
 
-export default function leaderboard(props : LeaderboardProps) {
-  const { user } = props;
-  const { level, totalAmount,completeChallenge } = useContext(ChallengeContext);
+export default function leaderboard (propsLeaderboard: LeaderboardProps) {
+  const { user } = propsLeaderboard
+  const { level, totalAmount, completeChallenge } = useContext(ChallengeContext)
   return (
 
     <ChallengeProvider
-    level={props.level}
-    currentExperience={props.currentExperience}
-    challengesCompleted={props.challengesCompleted}
-    totalAmount={props.totalAmount}
+    level={propsLeaderboard.level}
+    currentExperience={propsLeaderboard.currentExperience}
+    challengesCompleted={propsLeaderboard.challengesCompleted}
+    totalAmount={propsLeaderboard.totalAmount}
     >
 
     <div className={styles.container}>
@@ -51,61 +49,41 @@ export default function leaderboard(props : LeaderboardProps) {
           <p>EXPERIÊNCIA</p>
         </section>
 
-            
           <section className={styles.users}>
             <div className={styles.position}>
-            
+            <p>1</p>
             </div>
 
             <div className={styles.userInfo}>
+            <p>{level}</p>
 
             <div className={styles.user}>
-                <img 
-                  src={user.avatar_url} 
+                <img
+                  src="https://avatars.githubusercontent.com/u/61067057?s=460&u=f372f3e9b503936fb5a01148b555041e29230fd3&v=4"
                   alt="user image"
                 />
-
                 <div>
-                  <strong>{user.name}</strong>
+                  <strong>David Bernardo</strong>
                   <p>
                     <img src="icons/level.svg" alt="level"/>
-                    Level {level}
-                  </p>
+                    Level 01 </p>
                 </div>
               </div>
 
               <div className={styles.text}>
-                <p>{completeChallenge}</p>
+                <p> 25 </p>
                 <p>completados</p>
               </div>
-              
+
               <div className={styles.text}>
-                <p>{totalAmount}</p>
+                <p>1250</p>
                 <p>xp</p>
               </div>
             </div>
           </section>
-         
+
       </div>
     </div>
      </ChallengeProvider>
-  );
+  )
 }
-export const getServerSideProps: GetServerSideProps = async (ctx) => {
-  const  username  = ctx.params;
-  const response = await fetch(`https://api.github.com/users/${username}`);
-  const user = await response.json();
-
-  const { level, currentExperience, challengesCompleted,totalAmount,  } = ctx.req.cookies;
-
-  return {
-    props: {
-      user,
-      level: Number(level),
-      currentExperience: Number(currentExperience),
-      challengesCompleted: Number(challengesCompleted),
-      totalAmount:Number(totalAmount)
-    
-    },
-  };
-};

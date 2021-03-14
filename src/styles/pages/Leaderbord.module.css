@@ -19,6 +19,17 @@
   color: var(--title);
 }
 
+@media (max-width: 880px) {
+ .container {
+    width: 400px;
+    margin-right: 150px;
+   
+
+    flex-direction: column;
+  }
+  
+}
+
 .info {
   display: flex;
   padding: 2.5rem 3.5rem 1.5rem 0.25rem;

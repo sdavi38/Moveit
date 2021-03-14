@@ -2,7 +2,6 @@ import Link from 'next/link';
 import {useRouter} from 'next/router'
 import { useState } from 'react';
 import Cookies from 'js-cookie';
-import { FiAward, FiHome, FiLogOut, FiSettings } from 'react-icons/fi';
 import styles from '../styles/components/Sidebar.module.css';
 
 
@@ -21,7 +20,7 @@ export function Sidebar({page}:SidebarProps) {
     Cookies.remove('username');
     Cookies.remove('currentExperience');
    
-    router.push('/login');
+    router.push('/');
   }
 
   return (
